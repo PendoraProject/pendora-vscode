@@ -1,0 +1,25 @@
+{
+    "name": "pendora-lang",
+    "displayName": "Pendora Language Features",
+    "description": "Syntax highlighting for the Pendora language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pendora",
+            "aliases": ["Pendora", "pendora"],
+            "extensions": [".pendora",".pndra"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pendora",
+            "scopeName": "source.pendora",
+            "path": "./syntaxes/pendora.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pendora",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pendora",
+				"match": "\\b(if|while|for|return)\\b"
+			},
+			{
+				"name": "meta.class.pendora",
+				"match": "\\b(Global|InitMethod|MutMethod|Object|String|int|bool)\\b"
+			},
+			{
+				"name": "entity.name.function.pendora",
+				"match": "\\b(route|request|return|shape|initialisers|mutations|headRoute|values)\\b"
+			},
+			{
+				"name": "entity.name.tag.pendora",
+				"match": "@(as|import)+"
+			},
+			{
+				"name": "entity.name.type.pendora",
+				"begin": "<",
+				"end": ">",
+				"match": "<[A-z]+>"
+			}
+		]
+		},
+		"strings": {
+			"name": "string.quoted.double.pendora",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pendora",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pendora"
+}
